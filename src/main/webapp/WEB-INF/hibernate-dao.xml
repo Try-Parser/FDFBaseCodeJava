@@ -6,8 +6,8 @@
 	
 	<import resource="hibernate-datasource.xml" />
 	
-<!-- 	<bean id="customerDao" class="com.innosoft.webreservation.dao.CustomerDaoImpl">
+	<bean id="sampleDao" class="com.fdf.basecode.daoImpl.SampleDaoImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
-	</bean> -->
+	</bean> 
 	
 </beans>

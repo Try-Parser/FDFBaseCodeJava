@@ -1,5 +1,12 @@
 package com.fdf.basecode.service;
 
-public interface SampleService {
+import java.util.List;
 
+import com.fdf.basecode.entity.SampleEntity;
+
+public interface SampleService {
+	public SampleEntity create(SampleEntity e);
+	public SampleEntity update(SampleEntity e);
+	public boolean delete(int id);
+	public List<SampleEntity> ListSampleEntity();
 }
