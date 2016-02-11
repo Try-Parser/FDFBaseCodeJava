@@ -1,5 +1,6 @@
 package com.fdf.basecode.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,6 +12,7 @@ public class SampleEntity {
 	@Id
 	@GeneratedValue
 	public int id;
+	@Column(name="Desc")
 	public String Desc;
 	
 	public int getId() {

@@ -23,7 +23,11 @@ public class SampleDaoImpl implements SampleDao{
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
-	
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
 	public SampleEntity create(SampleEntity e) {
 		try {
 			Session session = this.sessionFactory.openSession();

@@ -38,21 +38,7 @@
 		<property name="dataSource" ref="myDataSource" />
 		<property name="annotatedClasses">
 			<list>				
-	<!-- 			<value>com.innosoft.webreservation.entity.MstCharge</value>
-				<value>com.innosoft.webreservation.entity.MstCustomerTime</value>
-				<value>com.innosoft.webreservation.entity.MstCalendar</value>
-				<value>com.innosoft.webreservation.entity.MstCode</value>
-				<value>com.innosoft.webreservation.entity.MstCustomer</value>	
-				<value>com.innosoft.webreservation.entity.MstMessage</value>
-				<value>com.innosoft.webreservation.entity.MstSecurityUser</value>
-				<value>com.innosoft.webreservation.entity.TrnAccessLog</value>
-				<value>com.innosoft.webreservation.entity.TrnChargeCount</value>			
-				<value>com.innosoft.webreservation.entity.TrnReservation</value>			
-				<value>com.innosoft.webreservation.entity.TrnSendLog</value>
-				<value>com.innosoft.webreservation.entity.MstCalendarActivity</value>	
-				<value>com.innosoft.webreservation.entity.MstCustomerMember</value>		
-				<value>com.innosoft.webreservation.entity.MstSecurityUserPassword</value>	
-				<value>com.innosoft.webreservation.entity.SysSetting</value> -->					
+	 			<value>com.fdf.basecode.entity.SampleEntity</value>				
 			</list>
 		</property>
 

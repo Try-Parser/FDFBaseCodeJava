@@ -18,6 +18,7 @@ import com.fdf.basecode.service.SampleService;
 @Controller
 @RequestMapping("api/sample")
 public class SampleApi {
+	
 	@Autowired
 	private SampleService sampleService;	
 	
