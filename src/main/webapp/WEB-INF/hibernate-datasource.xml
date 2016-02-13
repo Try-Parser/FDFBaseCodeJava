@@ -38,7 +38,7 @@
 		<property name="dataSource" ref="myDataSource" />
 		<property name="annotatedClasses">
 			<list>				
-	 			<value>com.fdf.basecode.entity.SampleEntity</value>				
+	 			<value>com.fdf.basecode.entity.UserCred</value>				
 			</list>
 		</property>
 

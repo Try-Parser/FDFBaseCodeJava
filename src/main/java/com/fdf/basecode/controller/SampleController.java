@@ -5,8 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class SampleController {
+	
 	@RequestMapping("/")
 	public String Index(){
 		return "index";
+	}
+	@RequestMapping("/dashboard")
+	public String dashboard(){
+		return "dashboard";
 	}
 }

@@ -5,75 +5,37 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/security
 	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
-<!-- 		
-	<beans:bean id="loginServiceImpl" class="com.innosoft.webreservation.service.LoginServiceImpl"/>
-	 -->
-	<!-- <http auto-config="true">  
+ 		
+	<beans:bean id="Security" class="com.fdf.basecode.securityImpl.SecurityImpl" />
+
+	 <http auto-config="true">  
 		<access-denied-handler error-page="/403_page" />
-		<intercept-url pattern="/user/chargingReport/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/user/reservationReport/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/user/userReport/" access="ROLE_ADMIN,ROLE_CUSTOMER"/>
-		<intercept-url pattern="/user/user/" access="ROLE_ADMIN,ROLE_CUSTOMER"/>
-		<intercept-url pattern="/user/userPassword**" access="ROLE_USER,ROLE_ADMIN"/>
-		<intercept-url pattern="/user/*" access="ROLE_ADMIN,ROLE_CUSTOMER"/>
-		<intercept-url pattern="/software/email/" access="ROLE_ADMIN,ROLE_CUSTOMER"/>
-		<intercept-url pattern="/software/notificationEmail/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/system/customer/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/system/calendar/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/system/time/" access="ROLE_ADMIN,ROLE_CUSTOMER"/>
-		<intercept-url pattern="/system/activity/" access="ROLE_ADMIN,ROLE_CUSTOMER"/>
-		<intercept-url pattern="/system/message/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/system/code/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/system/charge/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/system/userPassword/" access="ROLE_ADMIN"/>
-		<intercept-url pattern="/system/" access="ROLE_CUSTOMER,ROLE_ADMIN"/>
-		<intercept-url pattern="/system/*" access="ROLE_CUSTOMER,ROLE_ADMIN"/>
-	    <intercept-url pattern="/software/" access="ROLE_USER,ROLE_ADMIN, ROLE_CUSTOMER"/>
-	    <intercept-url pattern="/software/*" access="ROLE_ADMIN,ROLE_CUSTOMER"/>  
-	    <intercept-url pattern="/api/accessLog/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>  
-	    <intercept-url pattern="/api/calendarActivity/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/calendar/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/charge/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/chargeCount/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/code/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/customer/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/customerMember/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/customerTime/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/emai/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/message/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/reservation/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/sendLog/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/settings/**" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/user/list" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>
-	    <intercept-url pattern="/api/user/update" access="ROLE_ADMIN,ROLE_CUSTOMER,ROLE_USER"/>	    
-	    <form-login login-page="/login/"></form-login>
-		<form-login 
-		    login-page="/login/" 
-		    default-target-url="/loginMember/" 
-			authentication-failure-url="/login?error" />
+		<intercept-url pattern="/dashboard/**" access="ROLE_ADMIN"/>
+ 
+		<form-login login-page="/"  default-target-url="/dashboard" authentication-failure-url="/" />
 		<logout logout-success-url="/" />
-		enable csrf protection
-		<csrf/>	    
+	<!-- enable csrf protection 
+		<csrf/>	    -->
 	</http>  
-  
+  	
 	<authentication-manager>  
-	    <authentication-provider user-service-ref="loginServiceImpl">  
-	        <password-encoder hash="plaintext"> 
-	        <password-encoder hash="bcrypt" ref="encoder" >   
-	    </password-encoder>
+	    <authentication-provider user-service-ref="Security">  
+	        <!-- <password-encoder hash="plaintext">  -->
+	        <!-- <password-encoder hash="bcrypt" ref="encoder" ></password-encoder> -->
 	    </authentication-provider>  
 	</authentication-manager>
 	
 	
-  <beans:bean id="encoder" 
+<!--   <beans:bean id="encoder" 
 	class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
 	<beans:constructor-arg name="strength" value="11" />
-  </beans:bean>
-	 -->
+  </beans:bean> -->
 
-<!--  <authentication-manager>
+
+<!--   <authentication-manager>
     <authentication-provider>
-      <jdbc-user-service data-source-ref="myDataSource"/> 
+      <jdbc-user-service data-source-ref="myDataSource" /> 
+      
     </authentication-provider>
   </authentication-manager> -->
   
