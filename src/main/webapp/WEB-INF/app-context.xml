@@ -6,13 +6,15 @@
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <context:component-scan base-package="com.fdf.basecode.dao,
+    									  com.fdf.basecode.daoImpl,
     									  com.fdf.basecode.service,
-    									  com.fdf.basecode.entity,   
+    									  com.fdf.basecode.entity,
+    									  com.fdf.basecode.serviceImpl   
                                           com.fdf.basecode.server"/>
 	<context:annotation-config />
 	
-	<bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
-	
+	<!-- <bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+	 -->
 	<!-- Background process beans -->
     <!-- Job -->
 <!--     <bean name="notificationReservationJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">

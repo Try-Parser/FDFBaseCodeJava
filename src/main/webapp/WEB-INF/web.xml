@@ -14,7 +14,7 @@
 			/WEB-INF/hibernate-datasource.xml,
 			/WEB-INF/hibernate-dao.xml,
 			/WEB-INF/hibernate-transaction.xml,
-			/WEB-INF/spring-security.xml
+	<!-- 		/WEB-INF/spring-security.xml -->
 		</param-value>
 	</context-param>
 

@@ -48,11 +48,7 @@ public class SampleApi {
 			return new ResponseEntity<SampleEntity>(e, HttpStatus.BAD_REQUEST);
 		}		
 	}	
-	/**
-	 * Delete customer
-	 * @param id
-	 * @return
-	 */
+
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> deleteSampleEntity(@PathVariable("id") int id) {
 		try {
