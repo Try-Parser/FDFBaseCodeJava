@@ -14,13 +14,11 @@
 	<context:component-scan base-package="com.fdf.basecode.controller,
                                           com.fdf.basecode.api"/>
 	<mvc:annotation-driven/>
-<!-- 	<mvc:resources mapping="/img/**" location="/img/" />
-	<mvc:resources mapping="/font-awesome/**" location="/font-awesome/" />
-	<mvc:resources mapping="/fonts/**" location="/fonts/" />
-	<mvc:resources mapping="/css/**" location="/css/" />
-	<mvc:resources mapping="/js/**" location="/js/" />	
-	<mvc:resources mapping="/lib/**" location="/lib/" />
-    <mvc:resources mapping="/wijmo/**" location="/wijmo/" /> -->
+	
+ 	<mvc:resources mapping="/assets/images/**" location="/assets/images/" />
+	<mvc:resources mapping="/assets/fonts/**" location="/assets/fonts/" />
+	<mvc:resources mapping="/assets/css/**" location="/assets/css/" />
+	<mvc:resources mapping="/assets/js/**" location="/assets/js/" />	
 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
